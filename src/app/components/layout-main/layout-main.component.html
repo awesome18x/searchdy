@@ -1,0 +1,224 @@
+<!-- <div class="top_search my-3">
+  <img class="logo" src="../assets/images/logo.jpeg" alt="" />
+</div> -->
+
+<div class="top_content">
+  <div class="first_left">
+    <div class="description">
+      <div class="sold item col-md-2">
+        <div class="overlay"></div>
+        <div class="label"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="name">Cần bán</div>
+      </div>
+      <div class="rent item col-md-2">
+        <div class="overlay"></div>
+        <div class="label"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="name">Cho thuê</div>
+      </div>
+      <div class="business item col-md-2">
+        <div class="overlay"></div>
+        <div class="label"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="name">Kinh doanh</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="second_right">
+    <div class="mark_question">
+      <img
+        class="image_question"
+        src="assets/images/question-mark.svg"
+        alt=""
+      />
+    </div>
+    <div class="item my-3"></div>
+    <div class="item my-3"></div>
+    <div class="item my-3"></div>
+  </div>
+</div>
+<div class="bottom_content mt-4">
+  <div class="action_search_login_register">
+    <form class="">
+      <div class="form-group input-group">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Mã số ô BĐS (6 chữ số)"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">Search</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="register_action mt-3" (click)="openModal(template)">
+          Tạo tài khoản mới
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="login_action mt-3" (click)="openModalLogin(templateLogin)">
+          Đăng nhập
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="message_today">
+    <div class="message_button">Thông điệp hôm nay (tôi cần)</div>
+    <div
+      class="message_detail d-flex justify-content-between align-items-center"
+    >
+      <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div>
+      <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div>
+      <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div>
+      <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div>
+      <!-- <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div>
+      <div class="message_item mt-3">Ăn uống</div>
+      <div class="message_item mt-3">Ngủ nghỉ</div> -->
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <h3 class="title">Welcome to Searchdy</h3>
+      <div class="sub_title">Find new ideas to try</div>
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+        class="mt-5 text-center"
+        autocomplete="new-phone"
+      >
+        <div class="form-group w-75 mg-auto">
+          <input
+            class="input_searchdy"
+            type="text"
+            formControlName="email"
+            placeholder="Email"
+            class="form-control form-control-input"
+          />
+<!--          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">-->
+<!--            <div *ngIf="f.email.errors.required">Email is required</div>-->
+<!--            <div *ngIf="f.email.errors.email">-->
+<!--              Email must be a valid email address-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+        <div class="form-group mt-3 w-75 mg-auto">
+          <input
+            class="input_searchdy"
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+            class="form-control form-control-input"
+          />
+<!--          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">-->
+<!--            <div *ngIf="f.password.errors.required">Password is required</div>-->
+<!--          </div>-->
+        </div>
+        <div class="text-center mt-3">
+          <div class="continue">Continue</div>
+          <div class="or">OR</div>
+          <div class="continue_with_facebook d-flex align-items-center">
+            <img class="image_facebook" src="../assets/images/facebook.svg" />
+            Tiếp tục truy cập Facebook
+          </div>
+          <div class="continue_with_google d-flex align-items-center">
+            <img class="image_google" src="../assets/images/google_icon.svg" />
+            <div class="content_with_google">Tiếp tục truy cập Google</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #templateLogin>
+  <div class="modal-header">
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <h3 class="title">Welcome to Searchdy</h3>
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+        class="mt-5 text-center"
+        autocomplete=""
+      >
+        <div class="form-group w-75 mg-auto">
+          <input
+            class="input_searchdy"
+            type="text"
+            formControlName="email"
+            placeholder="Email"
+            class="form-control form-control-input"
+          />
+<!--          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">-->
+<!--            <div *ngIf="f.email.errors.required">Email is required</div>-->
+<!--            <div *ngIf="f.email.errors.email">-->
+<!--              Email must be a valid email address-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+        <div class="form-group mt-3 w-75 mg-auto">
+          <input
+            class="input_searchdy"
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+            class="form-control form-control-input"
+          />
+<!--          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">-->
+<!--            <div *ngIf="f.password.errors.required">Password is required</div>-->
+<!--          </div>-->
+        </div>
+        <div class="form-group forgot_password">
+          <a href="">Forgot your password</a>
+        </div>
+
+        <div class="text-center mt-3">
+          <div class="continue" (click)="goToRegisterRealty()">Log in</div>
+          <div class="or">OR</div>
+          <div class="continue_with_facebook d-flex align-items-center">
+            <img class="image_facebook" src="../assets/images/facebook.svg" />
+            Tiếp tục truy cập Facebook
+          </div>
+          <div class="continue_with_google d-flex align-items-center">
+            <img class="image_google" src="../assets/images/google_icon.svg" />
+            <div class="content_with_google">Tiếp tục truy cập Google</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>

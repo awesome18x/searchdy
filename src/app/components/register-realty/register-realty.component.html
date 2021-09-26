@@ -6,39 +6,22 @@
     <div class="random_vip mx-4">Số Vip</div>
   </div>
   <div class="register_realty_sub-title mt-3">
-    <select
-      class="form-select form-select my-2"
-      aria-label=".form-select-lg example"
-      style="width: 25%; flex-grow: 2.5"
-    >
-      <option selected>Khu vực</option>
-      <option value="1">Hà Nội</option>
-      <option value="2">TP. Hồ Chí Minh</option>
-      <option value="3">Hải Phòng</option>
-      <option value="4">Hải Dương</option>
-      <option value="5">Nam Định</option>
-    </select>
-    <select
-      class="form-select form-select my-2"
-      aria-label=".form-select-lg example"
-      style="width: 25%; flex-grow: 2.5"
-    >
-      <option selected>Cung đường</option>
-      <option value="1">Dự án</option>
-    </select>
-    <select
-      class="form-select form-select my-2"
-      aria-label=".form-select-lg example"
-      style="width: 25%; flex-grow: 2.5"
-    >
-      <option selected>Lựa chọn</option>
-      <option value="1">Lựa chọn 1</option>
-      <option value="2">Lựa chọn 2</option>
-      <option value="3">Lựa chọn 3</option>
-    </select>
-    <!-- <div class="item_center">Khu vực</div>
-    <div class="item_center">Cung đường</div>
-    <div class="item_center">*</div> -->
+    <div class="area">Khu vực</div>
+    <div class="road_or_project">
+      <div class="top_line">
+        <div class="road" (click)="setClassForInput(1)">
+          Cung đường
+        </div>
+        <div class="project" (click)="setClassForInput(2)">
+          Dự án
+        </div>
+      </div>
+      <div class="bottom_line">
+        <input type="text" class="form-control" [ngClass]="classInput">
+      </div>
+
+    </div>
+
   </div>
   <div class="register_realty_function mt-4">
     <div class="item">Tính năng lượn phố</div>
@@ -51,72 +34,37 @@
   <div class="form mt-3" style="width: 50%; margin: auto">
     <form action="">
       <div class="input-group mb-2">
-        <span class="input-group-text" id="name" style="width: 25%"
-        >Tên hiển thị</span
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="basic-url-1"
-          aria-describedby="basic-addon3"
-          placeholder="Nhập tên hiển thị"
-        />
+        <span class="input-group-text" id="name" style="width: 25%">Tên hiển thị</span>
+        <input type="text" class="form-control" id="basic-url-1" aria-describedby="basic-addon3"
+          placeholder="Nhập tên hiển thị" />
       </div>
       <div class="input-group mb-2">
-        <span class="input-group-text" id="phone-number" style="width: 25%"
-        >Số điện thoại</span
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="basic-url-2"
-          aria-describedby="basic-addon3"
-          placeholder="Nhập số điện thoại"
-        />
+        <span class="input-group-text" id="phone-number" style="width: 25%">Số điện thoại</span>
+        <input type="text" class="form-control" id="basic-url-2" aria-describedby="basic-addon3"
+          placeholder="Nhập số điện thoại" />
       </div>
       <div class="link">
         <div class="title_link">Các trang web và liên kết xã hội</div>
         <div class="link_social" (click)="showWeb()">
-          <img
-            src="./assets/images/plus.svg"
-            alt=""
-            class="image_plus"
-          />
+          <img src="./assets/images/plus.svg" alt="" class="image_plus" />
           <div class="title">Thêm một trang web</div>
         </div>
-        <input
-          type="text"
-          class="form-control my-2"
-          placeholder="Địa chỉ trang web"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-        />
+        <input type="text" class="form-control my-2" placeholder="Địa chỉ trang web" aria-label="Username"
+          aria-describedby="basic-addon1" />
         <div class="link_social" (click)="showSocialNetwork()">
-          <img
-            src="./assets/images/plus.svg"
-            alt=""
-            class="image_plus"
-          />
+          <img src="./assets/images/plus.svg" alt="" class="image_plus" />
           <div class="title">Thêm liên kết xã hội</div>
         </div>
         <div class="show-social">
-          <select
-            class="form-select form-select my-2"
-            aria-label=".form-select-lg example"
-            style="width: 25%; flex-grow: 2.5"
-          >
+          <select class="form-select form-select my-2" aria-label=".form-select-lg example"
+            style="width: 25%; flex-grow: 2.5">
             <option selected>Instagram</option>
             <option value="1">Tiktok</option>
             <option value="2">Twitter</option>
             <option value="3">Gmail</option>
           </select>
           <div class="input" style="display: flex; flex-grow: 7.5">
-            <input
-              type="email"
-              class="form-control my-2"
-              id="exampleFormControlInput1"
-              placeholder=""
-            />
+            <input type="email" class="form-control my-2" id="exampleFormControlInput1" placeholder="" />
           </div>
 
         </div>

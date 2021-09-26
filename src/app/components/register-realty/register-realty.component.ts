@@ -7,6 +7,7 @@ import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angul
   styleUrls: ['./register-realty.component.scss']
 })
 export class RegisterRealtyComponent implements OnInit {
+  classInput: string = '';
   isShowWeb = false;
   isShowSocialNetwork = false;
 
@@ -51,6 +52,20 @@ export class RegisterRealtyComponent implements OnInit {
   onAddSocialNetwork(): void {
     const control = new FormControl('', [Validators.required]);
     (this.addInfoSocial.get('social') as FormArray).push(control);
+  }
+
+  setClassForInput(num: number){
+    switch (num) {
+      case 1:
+        this.classInput = 'background-road';
+        break;
+      case 2:
+        this.classInput = 'background-project';
+        break;
+    
+      default:
+        break;
+    }
   }
 
 }

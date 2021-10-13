@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'register-realty',
     loadChildren: () => import('./components/register-realty/register-realty.module').then(m => m.RegisterRealtyModule)
+  },
+  {
+    path: 'job-hay',
+    loadChildren: () => import('./components/jobhay/jobhay.module').then(m => m.JobhayModule)
   }
 ];
 

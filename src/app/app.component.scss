@@ -1,5 +1,8 @@
 .top_search {
+  display: flex;
+  justify-content: space-between;
   padding-left: 10rem;
+  padding-right: 4rem;
   .logo {
     cursor: pointer;
     width: 16rem;

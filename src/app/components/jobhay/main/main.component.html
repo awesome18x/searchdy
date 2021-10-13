@@ -1,0 +1,23 @@
+<div class="content__jobhay">
+    <div class="round-one" *ngIf="state === StateEnum.init">
+        <div class="title">
+            <h3>Bạn phù hợp với ngành nghề nào?</h3>
+        </div>
+        <div class="sub__title">
+            <p>Hãy cùng khám phá nhé!</p>
+        </div>
+        <div class="option__item">
+            <div class="item item__boy" (click)="goToRound2('boy')">Nam</div>
+            <div class="item item__girl" (click)="goToRound2('girl')">Nữ</div>
+        </div>
+        <div class="quote">
+            <q>Chọn đúng ngành nghề là bạn đã thành công một nửa</q> - Johnny Hoang Dung
+        </div>
+    </div>
+
+    <div class="round-two" *ngIf="state === StateEnum.view">
+        nhieu luw chon
+    </div>
+
+
+</div>

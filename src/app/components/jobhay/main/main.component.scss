@@ -1,0 +1,47 @@
+.content__jobhay{
+    // position: fixed;
+    top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    .sub__title{
+        p{
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+    .option__item{
+        margin-top: 1.25rem;
+        margin-bottom:2rem;
+        display: flex;
+        justify-content: space-around;
+        .item{
+            width: 7rem;
+            height: 7rem;
+            background: aqua;
+            border-radius: .5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .item__boy:hover{
+            background: #32cd32;
+            color: #fff;
+        }
+
+        .item__girl:hover{
+            background: #ff69b4;
+            color: #fff;
+        }
+    }
+    
+
+    .round-two{
+        height: 20rem;
+        // width: 100%;
+        background: #ff69b4;
+    }
+}

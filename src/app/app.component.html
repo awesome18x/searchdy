@@ -1,5 +1,9 @@
 <div class="top_search my-3">
   <img class="logo" src="../assets/images/logo.jpeg" alt="" />
+  <ng-container *ngIf="isRouterWelcome">
+    <button class="btn"(click)="navigationToJobhay()">jobhay.vn</button>
+  </ng-container>
+  
 </div>
 
 <router-outlet></router-outlet>
